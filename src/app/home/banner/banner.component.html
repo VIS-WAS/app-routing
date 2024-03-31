@@ -16,6 +16,12 @@
       placeholder="Search Courses"
       #searchVar
     />
-    <button class="search-button">Search Courses</button>
+    <button
+      class="search-button"
+      [routerLink]="'/Courses'"
+      (click)="onSearchClicked(searchVar)"
+    >
+      Search Courses
+    </button>
   </div>
 </div>
