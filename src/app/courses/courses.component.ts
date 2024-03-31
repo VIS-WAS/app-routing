@@ -9,5 +9,5 @@ import { CourseService } from '../Services/course.service';
 })
 export class CoursesComponent {
   courseService = inject(CourseService);
-  Allcourses: Course[] = this.courseService.courses;
+  AllCourses: Course[] = this.courseService.courses;
 }

@@ -14,6 +14,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { BannerComponent } from './home/banner/banner.component';
 import { PopularComponent } from './home/popular/popular.component';
 import { CourseService } from './Services/course.service';
+import { CourseDetailComponent } from './courses/course-detail/course-detail.component';
 
 //DEFINE ROUTE
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'About', component: AboutComponent },
   { path: 'Contact', component: ContactComponent },
   { path: 'Courses', component: CoursesComponent },
+  { path: 'Courses/course/:id', component: CourseDetailComponent },
   { path: '**', component: NotFoundComponent }, //it should be defined at the end
 ];
 
@@ -37,6 +39,7 @@ const routes: Routes = [
     NotFoundComponent,
     BannerComponent,
     PopularComponent,
+    CourseDetailComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, RouterModule.forRoot(routes)],
   providers: [CourseService],
