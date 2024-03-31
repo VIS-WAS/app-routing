@@ -17,20 +17,25 @@ export class CoursesComponent implements OnInit {
 
   ngOnInit() {
     //this.searchString = this.activeRoute.snapshot.queryParams['search'];
-    this.searchString = this.activeRoute.snapshot.queryParamMap.get('search');
+    // this.searchString = this.activeRoute.snapshot.queryParamMap.get('search');
+    // this.activeRoute.queryParams.subscribe((data) => {
+    //   this.searchString = data['search'];
 
-    if (
-      this.searchString === undefined ||
-      this.searchString === '' ||
-      this.searchString === null
-    ) {
-      this.AllCourses = this.courseService.courses;
-    } else {
-      this.AllCourses = this.courseService.courses.filter((data) =>
-        data.title
-          .toLocaleLowerCase()
-          .includes(this.searchString.toLocaleLowerCase())
-      );
-    }
+    this.activeRoute.queryParamMap.subscribe((data) => {
+      this.searchString = data.get('search');
+      if (
+        this.searchString === undefined ||
+        this.searchString === '' ||
+        this.searchString === null
+      ) {
+        this.AllCourses = this.courseService.courses;
+      } else {
+        this.AllCourses = this.courseService.courses.filter((data) =>
+          data.title
+            .toLocaleLowerCase()
+            .includes(this.searchString.toLocaleLowerCase())
+        );
+      }
+    });
   }
 }
