@@ -179,11 +179,11 @@ hr {
   background-color: white;
 }
 
-.prev-nect-course {
+.prev-next-course {
   margin: 20px 0px;
   padding: 30px 0px;
 }
-.prev-nect-course > button {
+.prev-next-course > button {
   padding: 10px 30px;
   border: none;
   background-color: #cb4335;
