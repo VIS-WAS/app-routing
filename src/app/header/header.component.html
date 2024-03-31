@@ -26,7 +26,7 @@
 <div class="page-header">
   <!--HOME HEADER-->
   <div class="page-header-logo">
-    <h2>procademy</h2>
+    <h2>vish-courses</h2>
   </div>
   <div>
     <div class="page-header-secondary"></div>
@@ -41,10 +41,31 @@
 
         <!--------// and sources files are loaded each time. instead follow below//--------- -->
 
-        <a routerLink="Home">HOME</a>
-        <a [routerLink]="'About'">ABOUT</a>
-        <a [routerLink]="'Contact'">CONTACT</a>
-        <a routerLink="Courses">COURSES</a>
+        <!-- <a routerLink="Home" [routerLinkActive]="'active'">HOME</a> -->
+        <a
+          routerLink="Home"
+          [routerLinkActive]="'active'"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >HOME</a
+        >
+        <a
+          [routerLink]="'About'"
+          [routerLinkActive]="'active'"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >ABOUT</a
+        >
+        <a
+          [routerLink]="'Contact'"
+          [routerLinkActive]="'active'"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >CONTACT</a
+        >
+        <a
+          routerLink="Courses"
+          [routerLinkActive]="'active'"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >COURSES</a
+        >
       </div>
       <div class="page-header-login-logout">
         <a href="#">LOGIN</a>

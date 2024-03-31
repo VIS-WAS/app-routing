@@ -11,6 +11,9 @@ import { CoursesComponent } from './courses/courses.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { BannerComponent } from './home/banner/banner.component';
+import { PopularComponent } from './home/popular/popular.component';
+import { CourseService } from './Services/course.service';
 
 //DEFINE ROUTE
 const routes: Routes = [
@@ -32,9 +35,11 @@ const routes: Routes = [
     CoursesComponent,
     HomeComponent,
     NotFoundComponent,
+    BannerComponent,
+    PopularComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, RouterModule.forRoot(routes)],
-  providers: [],
+  providers: [CourseService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
