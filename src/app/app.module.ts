@@ -15,6 +15,7 @@ import { BannerComponent } from './home/banner/banner.component';
 import { PopularComponent } from './home/popular/popular.component';
 import { CourseService } from './Services/course.service';
 import { CourseDetailComponent } from './courses/course-detail/course-detail.component';
+import { ContactUsComponent } from './home/contact-us/contact-us.component';
 
 //DEFINE ROUTE
 const routes: Routes = [
@@ -40,6 +41,7 @@ const routes: Routes = [
     BannerComponent,
     PopularComponent,
     CourseDetailComponent,
+    ContactUsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, RouterModule.forRoot(routes)],
   providers: [CourseService],
