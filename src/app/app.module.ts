@@ -18,6 +18,7 @@ import { CourseDetailComponent } from './courses/course-detail/course-detail.com
 import { ContactUsComponent } from './home/contact-us/contact-us.component';
 import { RoutingModule } from './routing.module';
 import { LoginComponent } from './login/login.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { LoginComponent } from './login/login.component';
     CourseDetailComponent,
     ContactUsComponent,
     LoginComponent,
+    CheckoutComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, RoutingModule],
   providers: [CourseService],
