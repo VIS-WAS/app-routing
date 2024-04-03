@@ -12,3 +12,7 @@ export const canActivate = () => {
     return false;
   }
 };
+
+export const canActivateChild = () => {
+  return canActivate();
+};
