@@ -6,7 +6,7 @@ import { IDeactivateComponent } from '../Services/authgaurad.service';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css'],
 })
-export class ContactComponent implements IDeactivateComponent {
+export class ContactComponent {
   firstName: string = '';
   lastName: string = '';
   country: string = 'usa';

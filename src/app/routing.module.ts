@@ -18,7 +18,11 @@ const routes: Routes = [
   {
     path: 'Contact',
     component: ContactComponent,
-    canDeactivate: [AuthGuardService],
+    canDeactivate: [
+      (comp): ContactComponent => {
+        return comp.canExit();
+      },
+    ],
   },
   {
     path: 'Courses',
