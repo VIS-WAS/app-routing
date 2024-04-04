@@ -19,6 +19,7 @@ import { ContactUsComponent } from './home/contact-us/contact-us.component';
 import { RoutingModule } from './routing.module';
 import { LoginComponent } from './login/login.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
     LoginComponent,
     CheckoutComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, RoutingModule],
+  imports: [BrowserModule, AppRoutingModule, RoutingModule, FormsModule],
   providers: [CourseService],
   bootstrap: [AppComponent],
 })
