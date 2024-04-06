@@ -9,7 +9,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginComponent } from './login/login.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { AuthGuardService } from './Services/authgaurad.service';
-import { canActivate, canActivateChild } from './auth.guard';
+import { canActivate, canActivateChild, resolveFn } from './auth.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -27,7 +27,8 @@ const routes: Routes = [
   {
     path: 'Courses',
     component: CoursesComponent,
-    resolve: { courses: AuthGuardService },
+    // resolve: { courses: () => {} },
+    resolve: { courses: resolveFn },
   },
 
   {
