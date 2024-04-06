@@ -93,6 +93,7 @@ export class CourseService {
     },
   ];
 
+  //----------// illustrating realword data fetching to understand resolve route //---------------//
   getAllcourses() {
     return new Observable<Course[]>((sub) => {
       setTimeout(() => {

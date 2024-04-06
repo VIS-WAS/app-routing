@@ -27,6 +27,7 @@ const routes: Routes = [
   {
     path: 'Courses',
     component: CoursesComponent,
+    resolve: { courses: AuthGuardService },
   },
 
   {
