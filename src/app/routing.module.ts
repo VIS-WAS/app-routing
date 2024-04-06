@@ -36,6 +36,16 @@ const routes: Routes = [
     canActivateChild: [canActivateChild],
     children: [
       { path: 'course/:id', component: CourseDetailComponent },
+
+      //--------// way of passing static date from router.module.ts inside data: //----------//
+
+      // {
+      //   path: 'Checkout',
+      //   component: CheckoutComponent,
+      //   data:{name:'Test course',price:542}
+      // },
+
+      //--------// way of passing static date from router.module.ts inside data: //----------//
       {
         path: 'Checkout',
         component: CheckoutComponent,
